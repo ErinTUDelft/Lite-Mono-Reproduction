@@ -68,8 +68,8 @@ def test_simple(args):
     encoder_path = os.path.join(args.load_weights_folder, "encoder.pth")
     decoder_path = os.path.join(args.load_weights_folder, "depth.pth")
 
-    encoder_dict = torch.load(encoder_path)
-    decoder_dict = torch.load(decoder_path)
+    encoder_dict = torch.load(encoder_path, map_location=torch.device('cpu'))
+    decoder_dict = torch.load(decoder_path, map_location=torch.device('cpu'))
 
     # extract the height and width of image that this model was trained with
     feed_height = encoder_dict['height']
