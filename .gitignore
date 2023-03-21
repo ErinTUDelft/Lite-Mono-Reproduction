@@ -129,3 +129,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .DS_Store
+
+images/*_disp.jpeg
+images/*_disp.npy
