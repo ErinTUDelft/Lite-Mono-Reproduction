@@ -155,6 +155,7 @@ class LiteMonoOptions:
         # SYSTEM options
         self.parser.add_argument("--no_cuda",
                                  help="if set disables CUDA",
+                                 default = "--no_cuda",
                                  action="store_true")
         self.parser.add_argument("--num_workers",
                                  type=int,
