@@ -57,4 +57,4 @@ module load py-pyparsing
 module load py-python-dateutil                                          
 
 
-srun python train.py --data_path "/scratch/elucassen/kitti_data" --model_name Erin_train_Saturday_1 --batch_size 6>Erin.$$.log 2>Erin.$$.err
+srun python train.py --data_path "/scratch/elucassen/kitti_data" --model_name Erin_train_Saturday_1 --batch_size 6 >Erin.$$.log 2>Erin.$$.err
