@@ -48,7 +48,6 @@ module load py-importlib-resources
 module load py-install                                                 
 module load py-kiwisolver                                            
 module load py-lazy-loader                                            
-linear-warmup-cosine-annealing-warm-restarts-weight-decay 1.0
 module load py-matplotlib                                              
 module load py-networkx                                               
 
