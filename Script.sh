@@ -25,7 +25,4 @@ module load py-tensorboardX
 module load py-timm
 module load py-imageio
 
-
-cd /scratch/elucassen/Lite-Mono-Reproduction 
-git pull 
 srun python train.py --data_path "/scratch/elucassen/kitti_data" --model_name Erin_train_Saturday_1 --batch_size 16
