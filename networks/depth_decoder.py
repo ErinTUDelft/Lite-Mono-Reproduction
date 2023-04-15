@@ -63,3 +63,4 @@ class DepthDecoder(nn.Module):
 
         return self.outputs
 
+
