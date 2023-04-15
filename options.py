@@ -155,12 +155,11 @@ class LiteMonoOptions:
         # SYSTEM options
         self.parser.add_argument("--no_cuda",
                                  help="if set disables CUDA",
-                                 default = "--no_cuda",
                                  action="store_true")
         self.parser.add_argument("--num_workers",
                                  type=int,
                                  help="number of dataloader workers",
-                                 default=2)
+                                 default=12)
 
         # LOADING options
         self.parser.add_argument("--load_weights_folder",
