@@ -5,9 +5,9 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --gpus-per-task=2
-#SBATCH --partition=compute
+#SBATCH --partition=gpu
 #SBATCH --mem-per-cpu=1GB
-#SBATCH --account=innovation
+
 
 module load 2022r2
 
