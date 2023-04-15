@@ -7,6 +7,7 @@
 #SBATCH --gpus-per-task=1
 #SBATCH --partition=gpu
 #SBATCH --mem-per-cpu=1GB
+#SBATCH --account=education-ae-msc-ae
 
 
 module load 2022r2
