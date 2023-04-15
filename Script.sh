@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --gpus-per-task=1
 #SBATCH --partition=gpu
-#SBATCH --mem-per-cpu=1GB
+#SBATCH --mem-per-cpu=6GB
 #SBATCH --account=education-ae-msc-ae
 
 
@@ -57,4 +57,4 @@ module load py-pyparsing
 module load py-python-dateutil                                          
 
 
-srun python train.py --data_path "/scratch/elucassen/kitti_data" --model_name Erin_train_Saturday_1 --batch_size 16 >Erin.$$.log 2>Erin.$$.err
+srun python train.py --data_path "/scratch/elucassen/kitti_data" --model_name Erin_train_Saturday_1 --batch_size 6>Erin.$$.log 2>Erin.$$.err
