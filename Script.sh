@@ -4,7 +4,7 @@
 #SBATCH --time=01:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --gpus-per-task=1
+#SBATCH --gpus-per-task=2
 #SBATCH --partition=gpu
 #SBATCH --mem-per-cpu=1GB
 #SBATCH --account=education-ae-msc-ae
