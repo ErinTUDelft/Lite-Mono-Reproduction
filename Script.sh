@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #SBATCH --job-name="Lite-Mono"
-#SBATCH --time=01:00:00
+#SBATCH --time=04:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --gpus-per-task=2
+#SBATCH --gpus-per-task=1
 #SBATCH --partition=gpu
 #SBATCH --mem-per-cpu=1GB
 #SBATCH --account=education-ae-msc-ae
@@ -57,4 +57,4 @@ module load py-pyparsing
 module load py-python-dateutil                                          
 
 
-srun python train.py --data_path "/scratch/elucassen/kitti_data" --model_name Erin_train_Saturday_1 --batch_size 16
+srun python train.py --data_path "/scratch/elucassen/kitti_data" --model_name Erin_train_Saturday_1 --batch_size 16 >Erin.$$.log 2>Erin.$$.err
