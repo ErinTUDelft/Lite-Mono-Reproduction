@@ -13,15 +13,16 @@ module load 2022r2
 
 module load openmpi
 module load python
-module load py-numpy/1.19.5
+module load py-numpy
 module load py-mpi4py
 
-module load six
-module load linear-warmup-cosine-annealing-warm-restarts-weight-decay 
+module load py-six
+module load py-linear-warmup-cosine-annealing-warm-restarts-weight-decay 
 module load py-torch
 module load py-torchvision
 module load py-tensorboardX
-module load timm
+module load py-timm
+module load py-imageio
 
 
 cd /scratch/elucassen/Lite-Mono-Reproduction 
