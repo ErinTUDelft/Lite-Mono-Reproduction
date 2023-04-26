@@ -15,8 +15,10 @@ module unload py-torch
 
 srun pip3 list >Erin.GPU.piplist.$$.log
 
+srun /usr/bin/nvidia-smi >Erin.GPU.smi.$$.log 2>Erin.GPU.smi.$$.err
+
 previous=$(/usr/bin/nvidia-smi --query-accounted-apps='gpu_utilization,mem_utilization,max_memory_usage,time' --format='csv' | /usr/bin/tail -n '+2')
 
-srun python3 train.py --data_path "/scratch/elucassen/kitti_data" --model_name Erin_train_GPU_$$_1 --batch_size 6 >Erin.GPU.$$.log 2>Erin.GPU.$$.err
+srun python3 train.py --data_path "/scratch/elucassen/kitti_data" --model_name Erin_train_GPU_$$_1 --batch_size 12 >Erin.GPU.$$.log 2>Erin.GPU.$$.err
 
 /usr/bin/nvidia-smi --query-accounted-apps='gpu_utilization,mem_utilization,max_memory_usage,time' --format='csv' | /usr/bin/grep -v -F "$previous" >Erin.GPU.nv.$$.log 2>Erin.GPU.nv.$$.err

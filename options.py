@@ -159,7 +159,7 @@ class LiteMonoOptions:
         self.parser.add_argument("--num_workers",
                                  type=int,
                                  help="number of dataloader workers",
-                                 default=2)
+                                 default=12)
 
         # LOADING options
         self.parser.add_argument("--load_weights_folder",
@@ -175,7 +175,7 @@ class LiteMonoOptions:
         self.parser.add_argument("--log_frequency",
                                  type=int,
                                  help="number of batches between each tensorboard log",
-                                 default=250)
+                                 default=100)
         self.parser.add_argument("--save_frequency",
                                  type=int,
                                  help="number of epochs between each save",
