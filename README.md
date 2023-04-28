@@ -22,6 +22,7 @@
 - [Results](#results)
   - [KITTI](#kitti) 
   - [Speed Evaluation](#speed-evaluation)
+  - [Robustness](#robustness)
 - [Data Preparation](#data-preparation)
 - [Single Image Test](#single-image-test)
 - [Evaluation](#evaluation)
@@ -56,6 +57,10 @@ You can download the trained models using the links below.
 <img src="./img/speed.png" width="100%" alt="speed evaluation" align=center />
 
 
+### Robustness
+<img src="./img/robustness.png" width="100%" alt="robustness" align=center />
+
+The [RoboDepth Challenge Team](https://github.com/ldkong1205/RoboDepth) is evaluating the robustness of different depth estimation algorithms. Lite-Mono has achieved the best robustness to date.
 
 ## Data Preparation
 Please refer to [Monodepth2](https://github.com/nianticlabs/monodepth2) to prepare your KITTI data. 
@@ -74,7 +79,7 @@ Please refer to [Monodepth2](https://github.com/nianticlabs/monodepth2) to prepa
     pip install 'git+https://github.com/saadnaeem-dev/pytorch-linear-warmup-cosine-annealing-warm-restarts-weight-decay'
     
 #### start training
-    python train.py --data_path path/to/your/data --model_name mytrain --batch_size 12
+    python train.py --data_path path/to/your/data --model_name mytrain --num_epochs 30 --batch_size 12 --mypretrain path/to/your/pretrained/weights  --lr 0.0001 5e-6 31 0.0001 1e-5 31
     
 #### tensorboard visualization
     tensorboard --log_dir ./tmp/mytrain

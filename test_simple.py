@@ -42,7 +42,8 @@ def parse_args():
                         choices=[
                             "lite-mono",
                             "lite-mono-small",
-                            "lite-mono-tiny"])
+                            "lite-mono-tiny",
+                            "lite-mono-8m"])
 
     parser.add_argument('--ext', type=str,
                         help='image extension to search for in folder', default="jpg")
@@ -151,7 +152,7 @@ def test_simple(args):
             # PREDICTION
             input_image = input_image.to(device)
             features = encoder(input_image)
-            outputs, _ = depth_decoder(features)
+            outputs = depth_decoder(features)
 
             disp = outputs[("disp", 0)]
 
