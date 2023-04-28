@@ -71,7 +71,7 @@ In addition, we compare results from epoch 3 of both the VR Zone PC (NVIDIA RTX 
 **Table 2: Comparison evaluation results between VR Zone PC and DelftBlue GPU**
 | **Model**                              | **abs_rel** | **sq_rel** | **rmse** | **rmse_log** | **a1** | **a2** | **a3** |
 |----------------------------------------|-------------|------------|----------|--------------|--------|--------|--------|
-| VR Zone PC | 0.171       | 1.327      | 5.718    | 0.243        | 0.770  | 0.922  | 0.969  |
+| **VR Zone PC** | 0.171       | 1.327      | 5.718    | 0.243        | 0.770  | 0.922  | 0.969  |
 | **DelftBlue GPU** | 0.170       | 1.294      | 6.444    | 0.260        | 0.744  | 0.903  | 0.964  |
 
 As can be expected, abs_rel and sq_rel are lower (marginally) on the DelftBlue side, however the VR Zone PC has a overall lower rmse. Further investigation needs to take place to better explore why we get this result.
